@@ -1,19 +1,21 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <svg-icon icon-class="add" />
+    <img alt="Vue logo" src="../assets/img/logo.png">
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import moment from 'moment'
+// 引入中文
+import 'moment/locale/zh-cn'
+// 设置中文
+moment.locale('zh-cn')
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
+  created () {
+    const momentStr = moment().subtract(10, 'days').calendar()
+    console.log('现在时间：', momentStr)
   }
 }
 </script>

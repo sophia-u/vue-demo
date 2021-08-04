@@ -1,5 +1,4 @@
 import axios from 'axios'
-import store from '@/store'
 
 // 创建axios 实例
 const service = axios.create({
@@ -9,43 +8,34 @@ const service = axios.create({
 
 // request 拦截器
 service.interceptors.request.use(
-  config => {
+  (config) => {
     // 这里可以自定义一些config 配置
-
-    // loading + 1
-    store.dispatch('SetLoading', true)
 
     return config
   },
-  error => {
+  (error) => {
     //  这里处理一些请求出错的情况
 
-    // loading 清 0
-    setTimeout(function () {
-      store.dispatch('SetLoading', 0)
-    }, 300)
-
-    console.log(error)
     Promise.reject(error)
   }
 )
 
 // response 拦截器
 service.interceptors.response.use(
-  response => {
+  (response) => {
     const res = response.data
     // 这里处理一些response 正常放回时的逻辑
 
-    // loading - 1
-    store.dispatch('SetLoading', false)
+    if (!res.data.success) {
+      alert('提示：' + res.data.message)
+    }
 
     return res
   },
-  error => {
+  (error) => {
     // 这里处理一些response 出错时的逻辑
 
-    // loading - 1
-    store.dispatch('SetLoading', false)
+    alert('错误：' + error)
 
     return Promise.reject(error)
   }

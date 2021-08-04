@@ -1,17 +1,18 @@
-import request from '@/utils/request'
+import request from '@utils/request.js'
 
 export default {
   login (data) {
     return request({
-      url: '/login',
+      url: '/api/login',
       method: 'post',
       data
     })
   },
-  getUserInfo () {
+  logout (data) {
     return request({
-      url: '/userInfo',
-      method: 'get'
+      url: '/api/logout',
+      method: 'post',
+      data
     })
   }
 }

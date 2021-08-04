@@ -3,21 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "vue-cli-service serve --project-mode dev",
-    "test": "vue-cli-service serve --project-mode test",
-    "pro": "vue-cli-service serve --project-mode pro",
-    "pre": "vue-cli-service serve --project-mode pre",
-    "build:dev": "vue-cli-service build --project-mode dev",
-    "build:test": "vue-cli-service build --project-mode test",
-    "build:pro": "vue-cli-service build --project-mode pro",
-    "build:pre": "vue-cli-service build --project-mode pre",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "svg-sprite-loader": "^6.0.6",
+    "moment": "^2.29.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
@@ -30,14 +22,17 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/eslint-config-standard": "^5.1.2",
     "babel-eslint": "^10.1.0",
+    "compression-webpack-plugin": "^8.0.1",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "svg-sprite-loader": "^6.0.9",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-bundle-analyzer": "^4.4.2"
   }
 }
