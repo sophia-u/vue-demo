@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/img/logo.png">
+    <div class="vue">桌面端 Element</div>
   </div>
 </template>
 
@@ -19,3 +20,16 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.home {
+  .vue {
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    color: #fff;
+    background-color: cadetblue;
+  }
+}
+</style>
