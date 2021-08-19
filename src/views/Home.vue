@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/img/logo.png">
-    <div class="vue">移动端</div>
+    <div class="vue">移动端 Vant</div>
   </div>
 </template>
 
