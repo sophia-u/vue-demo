@@ -64,7 +64,7 @@ module.exports = {
       .options({
         symbolId: 'icon-[name]'
       })
-    
+
     const imgRule = config.module.rule('images')
     // 将小于 10kb 的图像资源内联以减少 HTTP 请求的数量。
     imgRule
